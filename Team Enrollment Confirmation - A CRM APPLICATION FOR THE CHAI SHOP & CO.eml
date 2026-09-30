@@ -1,0 +1,326 @@
+Delivered-To: sivasivaranjani619@gmail.com
+Received: by 2002:a05:651c:1418:b0:3a6:1240:45af with SMTP id u24csp2742867lje;
+        Tue, 22 Sep 2026 08:01:30 -0700 (PDT)
+X-Received: by 2002:a05:6a00:4b04:b0:871:b921:6f44 with SMTP id d2e1a72fcca58-87c81cc1935mr1890543b3a.12.1790089290073;
+        Tue, 22 Sep 2026 08:01:30 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1790089290; cv=none;
+        d=google.com; s=arc-20260327;
+        b=NWz8Fm3XdeWGUNY1SM0raymdERSfbB12CoiHM322EUdmC9k1mpjLW5rIQgY4aUV2Fp
+         pZvynt1JzMY4+62OVgdzz0EjGcwVz1BjDN/Cv0DdsolW8/C1ZS6lQBgTpAbZbx3GscAN
+         FjlKnUim8W5oG/i8M+7rPvWSD4Khg73xRYCAKOIQTN0Dz6Iv4EcvPKyQ4Unv84TArVFT
+         J4PcYK+anwNwNlzRjFCXMIF/+Q7f26H0Ir6EeBOmnbd8k/zDZZXHhg3jDyNtJ+rUrw4L
+         1cLSGjzjCecimHpqEPXsO2208NT0PJ9cRfhjhI3z99Vzj2TWymWs3vyZLKytMhFG247k
+         +mPQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=feedback-id:date:message-id:content-transfer-encoding:mime-version
+         :subject:to:from:dkim-signature:dkim-signature;
+        bh=iWYvBCO3nVB87gH/Cwqjve+d3yHnwLNHJcpmBlHJ2NQ=;
+        fh=kG5N+WgXS60cI5tSKaZas9sa63TLmHgVEm4NjdbActQ=;
+        b=WqMLb4RM9DOb92I9628turLiJatYlCdeR05V7sDoL8SCGwsO1eaU91ED43W5tbIFGX
+         vYtduY4aBqD0td7zW6VHTV0N9p2gLMDlKGrc4Pu1q69NS8OKcQFTI4JyCVT+QbesGtfC
+         Wu5nYwwHWKPZt5T5yk3WhbdIuFB7IfY/vVLdjvP/XN9Es8VyyT49RcRgaIiQvPsotli3
+         Pefzls30R84qld6MYE5TpQyUvaztwmapcQHV9FPXaP9GOGwy9A4eHRde/xxc/+ghEXlZ
+         qgMBzuDxVdVSFnop13c0TimIVSqS8xvdNqz/kiiJVfNxTgJXPty47krgr6+/nXAj6pkv
+         l3zw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@myskillwallet.ai header.s=ydzmjxxkt6fiv3g3wou4d6rsox7ux6mz header.b=hIizoFpG;
+       dkim=pass header.i=@amazonses.com header.s=rlntogby6xsxlfnvyxwnvvhttakdsqto header.b=GgTsukLt;
+       spf=pass (google.com: domain of 010901a0c9a2db2d-1fac7c99-9190-4e4b-b106-3ff4d810d34b-000000@communication.myskillwallet.ai designates 76.223.180.17 as permitted sender) smtp.mailfrom=010901a0c9a2db2d-1fac7c99-9190-4e4b-b106-3ff4d810d34b-000000@communication.myskillwallet.ai;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=myskillwallet.ai
+Return-Path: <010901a0c9a2db2d-1fac7c99-9190-4e4b-b106-3ff4d810d34b-000000@communication.myskillwallet.ai>
+Received: from c180-17.smtp-out.ap-south-1.amazonses.com (c180-17.smtp-out.ap-south-1.amazonses.com. [76.223.180.17])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-87cef56029dsi810415b3a.119.2026.09.22.08.01.29
+        for <sivasivaranjani619@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 22 Sep 2026 08:01:29 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 010901a0c9a2db2d-1fac7c99-9190-4e4b-b106-3ff4d810d34b-000000@communication.myskillwallet.ai designates 76.223.180.17 as permitted sender) client-ip=76.223.180.17;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@myskillwallet.ai header.s=ydzmjxxkt6fiv3g3wou4d6rsox7ux6mz header.b=hIizoFpG;
+       dkim=pass header.i=@amazonses.com header.s=rlntogby6xsxlfnvyxwnvvhttakdsqto header.b=GgTsukLt;
+       spf=pass (google.com: domain of 010901a0c9a2db2d-1fac7c99-9190-4e4b-b106-3ff4d810d34b-000000@communication.myskillwallet.ai designates 76.223.180.17 as permitted sender) smtp.mailfrom=010901a0c9a2db2d-1fac7c99-9190-4e4b-b106-3ff4d810d34b-000000@communication.myskillwallet.ai;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=myskillwallet.ai
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ydzmjxxkt6fiv3g3wou4d6rsox7ux6mz; d=myskillwallet.ai;
+	t=1790089289;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date;
+	bh=ul1WZM9oZvtgFZ4Tok6OF9LmbBxjz/Vlpp8FuvtvJAA=;
+	b=hIizoFpGimdLHBU1c8WH7TDuMJUd0jV4PKN2fY/FzjpODS+Jjxls5slXQYUOeMd4
+	xDHDyHsgI5iTO12bN6oSwQXGzIhGEuon5Pv7NQrh3CATwFBTigwGeLrtFTZeyuDcIb1
+	+9ouPtSniDXORQ0/ebOzqSXGjcwc1bKuKC3yR4aO4UvcjO9pqkm2kQCdT7V1P8QpdJy
+	/PcA3mu0kPcNceiUsoSHczqlJbQuswsD7Jk3H1W5/1sRLgqpdrfN82yeU4SfGYeAHPK
+	yNCFH+R6a86TJt1zF7F0TqhwT27BiuowFdb4naGBRCmLagezGxhpy0tMQHSUuYfbB2S
+	qAPtozom+A==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=rlntogby6xsxlfnvyxwnvvhttakdsqto; d=amazonses.com; t=1790089289;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=ul1WZM9oZvtgFZ4Tok6OF9LmbBxjz/Vlpp8FuvtvJAA=;
+	b=GgTsukLtvWsg4VdY53viIr6P8zQFUcXE/rkaUhfQrG9SCNvjGoSkTDHwdwZ9kTyh
+	2SCB79kJbFKwZrfbA5iSx8XTtt4ruOAxQx9zyCPucJVGPkTKMFAxmo+yYaOlZVeIz8T
+	FAlhbXhRY8ocLNCYGdDDiQUf4X7/0B7hz0IABihs=
+From: Skill Wallet <noreply@myskillwallet.ai>
+To: sivasivaranjani619@gmail.com
+Subject: Team Enrollment Confirmation - A CRM APPLICATION FOR THE CHAI SHOP
+ & CO
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Message-ID: <010901a0c9a2db2d-1fac7c99-9190-4e4b-b106-3ff4d810d34b-000000@ap-south-1.amazonses.com>
+Date: Tue, 22 Sep 2026 15:01:28 +0000
+Feedback-ID: ::1.ap-south-1.CE+aeCSTZdR2ZgvhZmy45rGQu8EsIMoiMSo6AJM1h7E=:AmazonSES
+X-SES-Outgoing: 2026.09.22-76.223.180.17
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notification</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 100%;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            background-color: #f5f5f5;
+        }
+
+        .email-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        .blue-bg {
+            background-color: #2563eb;
+            background-image: url("https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7831/Header-bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #9ca3af;
+            border-radius: 50%;
+            padding: 4px;
+            display: inline-block;
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 4px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            display: inline-block;
+            margin: 0 16px;
+        }
+
+        .bottom-img {
+            background-image: url("https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7831/Header-bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+</head>
+
+<body style="margin: 0; padding: 0; background-color: #f5f5f5">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="center" style="padding: 20px 0">
+                <table class="email-wrapper" width="600" border="0" cellspacing="0" cellpadding="0">
+                    <!-- Header -->
+                    <tr>
+                        <td class="blue-bg" style="padding: 24px">
+                            <img src="https://skillwalletapp.s3.amazonaws.com/image%20%287%29.png" alt="Logo"
+                                style="width: 96px; height: 40px" />
+                        </td>
+                    </tr>
+
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding: 48px; background-color: #ffffff">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td style="padding-bottom: 8px">
+                                        <h2 style="
+                          margin: 0;
+                          color: #2563eb;
+                          font-size: 18px;
+                          font-weight: 500;
+                          text-transform: capitalize;
+                          font-family: 'Montserrat';
+                        ">
+                                            Dear Student,
+                                        </h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="padding-bottom: 8px; color: #4b5563; font-size: 15px; font-family: 'Montserrat';">
+                                        Greetings from SmartBridge,
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="
+                        padding: 10px 0;
+                        font-size: 15px;
+                        color: #4b5563;
+                        font-family: 'Montserrat';
+                      ">
+                                        We are pleased to inform you that your team has been successfully enrolled for the project. Please find the team details below:<br><br>Team ID : SWTID-2026-3164<br>Team Size : 5<br>Team Leader : Sivaranjani E<br>Team member : Sneha B<br>Team member : Suganya E<br>Team member : Sivasaktthi S<br>Team member : Sudhesh P<br> <br>Kindly log in to your SkillWallet (MySkillWallet) to begin the project. <br>Get Started Now: <a href='https://myskillwallet.ai/login' target='_blank'>https://myskillwallet.ai/login</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="padding-bottom: 24px; color: #4b5563;font-size: 15px;  font-family: 'Montserrat';">
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-top: 16px">
+                                        <p
+                                            style="margin: 0;font-size:15px; padding-bottom: 8px ;font-family: 'Montserrat';">
+                                            Best Regards,
+                                        </p>
+                                        <p style="margin: 0; font-weight: 600;font-family: 'Montserrat';">
+                                            Team SmartBridge
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Tagline -->
+                    <tr>
+                        <td style="
+                  background-color: #2563eb;
+                  color: white;
+                  padding: 24px;
+                  text-align: center;
+                  font-weight: 500;
+                  font-size: 18px;
+                ">
+                            Skill Wallet - Your Skill is Your Networth
+                        </td>
+                    </tr>
+
+                    <!-- Contact Info -->
+                    <tr>
+                        <td style="padding: 24px; background-color: #ffffff">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td align="center" style="padding-bottom: 16px">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td class="contact-info">
+                                                    <svg class="icon" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <path
+                                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                                    </svg>
+                                                </td>
+                                                <td class="contact-info">
+                                                    <svg class="icon" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <path
+                                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                                        <path d="M22 6l-10 7L2 6" />
+                                                    </svg>
+                                                    <span style="color: #4b5563; font-size: 14px">skillwallet@thesmartbridge.com</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-top: 1px solid #9ca3af"></td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding: 16px 0">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td align="center" style="padding: 24px 0">
+                                                    <table align="center" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td style="padding: 0 8px">
+                                                                <a href="https://www.linkedin.com/company/myskillwallet/"
+                                                                    target="_blank">
+                                                                    <img src="https://skillwalletapp.s3.amazonaws.com/Linkedin.png"
+                                                                        width="30" height="30" alt="LinkedIn"
+                                                                        style="display: block" />
+                                                                </a>
+                                                            </td>
+
+                                                            <td style="padding: 0 8px">
+                                                                <a href="https://www.facebook.com/myskillwallet/"
+                                                                    target="_blank">
+                                                                    <img src="https://skillwalletapp.s3.amazonaws.com/fb.png"
+                                                                        width="30" height="30" alt="Facebook"
+                                                                        style="display: block" />
+                                                                </a>
+                                                            </td>
+
+                                                            <td style="padding: 0 8px">
+                                                                <a href="https://www.instagram.com/myskillwallet/"
+                                                                    target="_blank">
+                                                                    <img src="https://skillwalletapp.s3.amazonaws.com/Insta.png"
+                                                                        width="30" height="30" alt="Instagram"
+                                                                        style="display: block" />
+                                                                </a>
+                                                            </td>
+                                                            <td style="padding: 0 8px">
+                                                                <a href="https://x.com/myskillwallet" target="_blank">
+                                                                    <img src="https://skillwalletapp.s3.amazonaws.com/twitter.png"
+                                                                        width="30" height="30" alt="X"
+                                                                        style="display: block" />
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding: 16px 0; color: #6b7280; font-size: 14px">
+                                        6th Floor, Sundarayya Vignana Kendram, Technical Block,
+                                        Madhava Reddy Colony, Gachibowli, Hyderabad, Telangana
+                                        500032
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Bottom Bar -->
+                    <tr>
+                        <td style="height: 12px; background-color: #2563eb"></td>
+                    </tr>
+
+                    <!-- Pattern Background -->
+                    <tr>
+                        <td style="height: 80px" class="bottom-img"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
